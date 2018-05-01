@@ -1,0 +1,41 @@
+body {
+  color: #444;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.voucher {
+  float: left;
+
+  margin: -1px 0 0 -1px;
+  padding: 10px 15px;
+
+  border: 1px dashed #ddd;
+}
+
+.line1 {
+  display: inline-block;
+
+  max-width: 150px;
+
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.line2 {
+  float: right;
+
+  margin: 2px 0 0 20px;
+
+  color: #777;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.line3 {
+  padding-top: 10px;
+
+  font-weight: lighter;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 2px;
+}
