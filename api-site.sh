@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Controller connection settings
-username=
+username=admin
 password=
-baseurl=https://IP-UNIFI-CONTROLLER:8443
-site=h4xaotmg # site=692ccbzc can be found from the dashboard URL: https://unifi.example.com/manage/site/692ccbzc/dashboard
+baseurl=https://192.168.3.150:8443
+site=pyux3er0 # site=692ccbzc can be found from the dashboard URL: https://unifi.example.com/manage/site/692ccbzc/dashboard
 
 [ -f ./unifi_sh_env ] && . ./unifi_sh_env
 
