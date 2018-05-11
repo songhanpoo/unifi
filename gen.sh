@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sitename=(site1 site2 site3)
+sitename=(site1 site2)
 # Files needed
 #pwd=`pwd`
 #. $pwd/unifi-api.sh
@@ -11,12 +11,12 @@ pwd=`pwd`
 
 # Generation settings
 time=60 # Voucher time limit (minutes)
-amount=15 # New vouchers to generate
+amount=3000 # New vouchers to generate
 
 # HTML Settings
 line1="WiFi Voucher"
 line2="Valid for 60 minutes"
-
+author="make by Hieu Hien Hoa"
 # Generate vouchers
 unifi_login
 voucherID=`unifi_create_voucher $time $amount $note`
@@ -36,7 +36,7 @@ echo '<html><head><link rel="stylesheet" href="style.css" /></head><body>' >> ${
 for code in $vouchers
 do
     line3=${code:0:5}" "${code:5:10}
-    html='<div class="voucher"><div class="line1">'$line1'</div><div class="line2">'$line2'</div><div class="line3">'$line3'</div></div>'
+    html='<div class="voucher"><div class="line1">'$line1'</div><div class="line2">'$line2'</div><div class="line3">'$line3'</div><div class="author">'$author'</div></div>'
     echo $html >> ${i}.html
 done
 
@@ -47,3 +47,7 @@ done
 #  echo "Removing vouchers tmp file."
 #  rm vouchers.tmp
 #fi
+cd /mnt
+rm -rf *.html
+cd /root/unifi-voucher-generator
+cp -rf *.html /mnt/
