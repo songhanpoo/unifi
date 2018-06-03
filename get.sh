@@ -15,3 +15,5 @@ do
         echo " $create_time" >> time.tmp
 
 done
+getvoucher=`awk '!a[$0]++' time.tmp`
+echo " $getvoucher" >> final.txt
