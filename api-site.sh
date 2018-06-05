@@ -4,7 +4,7 @@
 username=admin
 password=
 baseurl=https://192.168.3.150:8443
-site=pyux3er0 # site=692ccbzc can be found from the dashboard URL: https://unifi.example.com/manage/site/692ccbzc/dashboard
+site=692ccbzc # site=692ccbzc can be found from the dashboard URL: https://unifi.example.com/manage/site/692ccbzc/dashboard
 
 [ -f ./unifi_sh_env ] && . ./unifi_sh_env
 
